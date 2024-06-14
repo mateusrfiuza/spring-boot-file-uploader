@@ -28,7 +28,7 @@ class FilesResourceIntegrationTest {
     private ResourceLoader resourceLoader;
 
     @Test
-    void givenValidFiles() throws Exception {
+    void should_return_200_when_receive_valid_files() throws Exception {
 
         /* Given */
         final var validMockFile = createValidFile();
@@ -48,7 +48,7 @@ class FilesResourceIntegrationTest {
 
 
     @Test
-    void givenAnInvalidFile() throws Exception {
+    void should_return_400_when_receive_invalid_files_extensions() throws Exception {
 
         /* Given */
         final var validMockFile = createValidFile();
@@ -68,7 +68,7 @@ class FilesResourceIntegrationTest {
     }
 
     @Test
-    void givenUploadMoreFilesThanAllowed() throws Exception {
+    void should_return_400_when_exceed_allowed_files_amount() throws Exception {
 
         /* Given */
         final var validMockFile = createValidFile();
@@ -91,7 +91,7 @@ class FilesResourceIntegrationTest {
     }
 
     @Test
-    void givenUploadMoreFilesThanAllowedAndFileInvalid() throws Exception {
+    void should_return_400_when_exceed_allowed_files_amount_and_invalid_files() throws Exception {
 
         /* Given */
         final var validMockFile = createValidFile();

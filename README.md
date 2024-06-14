@@ -42,5 +42,13 @@ Run commands on terminal inside project folder:
 
 #### Documentation in `Swagger`:
 1. Open your browser
-2. Type in URL bar `http://{app-ip-adress}:8080/swagger-ui.html`
+2. Type in URL bar `http://{app-ip-adress}:8080/swagger-ui/index.html`
 
+#### Sample curl
+```
+curl --location 'http://localhost:8080/files/compact' \
+--header 'accept: application/octet-stream' \
+--header 'Content-Type: application/octet-stream' \
+--form 'files=@"/Users/mateus/Desktop/Screenshot.jpg"' \
+--form 'files=@"/Users/mateus/Desktop/event-driven-book.pdf"'
+```
